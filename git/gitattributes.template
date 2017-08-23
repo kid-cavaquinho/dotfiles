@@ -1,0 +1,84 @@
+###############################################################################
+# Auto detect text files and perform LF normalization
+# http://davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
+###############################################################################
+* text = auto
+
+###############################################################################
+# These files are text and should be normalized (Convert crlf => lf)
+###############################################################################
+*.css   text
+*.js    text
+*.htm   text
+*.html  text
+*.xml   text
+*.txt   text
+
+###############################################################################
+# These files are binary and should be left untouched
+# (binary is a macro for -text -diff)
+###############################################################################
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.mov   binary
+*.mp4   binary
+*.mp3   binary
+*.gz    binary
+*.zip   binary
+*.7z    binary
+
+###############################################################################
+# Documents (about ASTEXTPLAIN: http://stackoverflow.com/questions/28146244/what-is-the-difference-between-diff-and-diff-astextplain)
+###############################################################################
+*.doc   diff=astextplain
+*.DOC   diff=astextplain
+*.docx  diff=astextplain
+*.DOCX  diff=astextplain
+*.dot   diff=astextplain
+*.DOT   diff=astextplain
+*.pdf   diff=astextplain
+*.PDF   diff=astextplain
+*.rtf   diff=astextplain
+*.RTF   diff=astextplain
+
+###############################################################################
+# Set default behavior for command prompt diff.
+#
+# This is need for earlier builds of msysgit that does not have it on by
+# default for csharp files.
+# Note: This is only used by command line
+###############################################################################
+*.cs     diff=csharp
+
+###############################################################################
+# Set the merge driver for project and solution files
+#
+# Merging from the command prompt will add diff markers to the files if there
+# are conflicts (Merging from VS is not affected by the settings below, in VS
+# the diff markers are never inserted). Diff markers may cause the following 
+# file extensions to fail to load in VS. An alternative would be to treat
+# these files as binary and thus will always conflict and require user
+# intervention with every merge. To do so, just uncomment the entries below
+###############################################################################
+*.sln       merge=binary
+*.csproj    merge=binary
+*.vbproj    merge=binary
+*.vcxproj   merge=binary
+*.vcproj    merge=binary
+*.dbproj    merge=binary
+*.fsproj    merge=binary
+*.lsproj    merge=binary
+*.wixproj   merge=binary
+*.modelproj merge=binary
+*.sqlproj   merge=binary
+*.wwaproj   merge=binary
+
+###############################################################################
+# Encrypt the repository
+# Remove/modify this line if the repository is meant to be open-source
+###############################################################################
+# *.* filter=git-crypt diff=git-crypt
+# .gitattributes !filter !diff
