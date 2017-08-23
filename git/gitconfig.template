@@ -81,3 +81,23 @@
     required = true
     clean = git-lfs clean %f
     smudge = git-lfs smudge %f
+
+[difftool "p4merge"]
+    path = C:\\Program Files\\Perforce\\p4merge.exe
+    trustExitCode = false  
+	
+[difftool]
+    prompt = false 
+
+[diff]
+    tool = p4merge 
+
+[mergetool "p4merge"]
+    path = C:\\Program Files\\Perforce\\p4merge.exe
+    trustExitCode = false 
+
+[mergetool]
+    keepBackup = false 
+
+[merge]
+    tool = p4merge
