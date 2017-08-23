@@ -13,6 +13,11 @@
 *.html  text
 *.xml   text
 *.txt   text
+*.pxd   text
+*.py    text
+*.py3   text
+*.pyw   text
+*.pyx   text
 
 ###############################################################################
 # These files are binary and should be left untouched
@@ -29,6 +34,12 @@
 *.gz    binary
 *.zip   binary
 *.7z    binary
+*.db    binary
+*.p     binary
+*.pkl   binary
+*.pyc   binary
+*.pyd   binary
+*.pyo   binary
 
 ###############################################################################
 # Documents (about ASTEXTPLAIN: http://stackoverflow.com/questions/28146244/what-is-the-difference-between-diff-and-diff-astextplain)
